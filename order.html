@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <link rel="icon" href="src/fav_yellow.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="teriyaki, restaurant, diner, kent">
+    <meta charset="UTF-8">
+    <title> Soho Teriyaki </title>
+</head>
+<body>
+<div class="container-lg p-0">
+<!-- top navigation bar stasrt -->
+<nav class="navbar navbar-expand-sm navbar-dark bg-primary flex-sm-column justify-content-center py-0">
+    <div>
+        <div class="navbar-brand pt-0 ml-sm-2">
+            <img src="src/soho_logo.png" id="logo">
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html"> Home </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="menu.html"> Menu </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="gallery.html"> Gallery </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="order.html"> Order Online </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- top navigation bar end -->
+
+<h1 class="text-center mt-4"> Location </h1>
+<div id="map"> map </div>
+<p class="text-center">10423 SE 240th St. Kent, WA 98031</p>
+<div class="row justify-content-center pb-3 m-0">
+    <a href="https://maps.google.com/maps?q=10423+SE+240th+St+Kent,+WA+98031" target="_blank">
+        <button type="button" class="btn btn-info btn-md">
+            Get Directions
+        </button>
+    </a>
+</div>
+<div class="container-fluid py-3">
+    <h1 class="text-center"> Order for Pick Up </h1>
+    <p class="text-center"> <a href="tel:2538541977" style="text-decoration:none;"> (253)854-1977 </a> </p>
+</div>
+
+<div class="mx-auto pb-3" style="max-width:576px;">
+    <h1 class="text-center pt-3"> Delivery </h1>
+    <div class="row p-0 m-0">
+        <div class="col-sm my-3">
+            <a href="https://www.doordash.com/store/soho-teriyaki-kent-kent-125303/en-US" target="_blank">
+                <img src="src/DoorDash_button.png" class="w-100 rounded">
+            </a>
+        </div>
+        <div class="col-sm my-3">
+            <a href="https://www.ubereats.com/seattle/food-delivery/soho-teriyaki/DjYndq6ARFqxXSo8OaC03g" target="_blank">
+                <img src="src/UberEats_button.png" class="w-100 rounded">
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!-- footer start -->
+<footer>
+    <hr>
+    <p> Copyright 2020. SOHO TERIYAKI. All rights reserved. </p>
+</footer>
+<!-- footer start -->
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script>
+    function initMap() {
+        var pos = {lat:47.386651, lng:-122.201261};
+        var map = new google.maps.Map(document.getElementById('map'), {zoom: 16, center: pos});
+        var marker = new google.maps.Marker({position: pos, map: map});
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAn5ZuZCqh3s7B-omEK54nw5Bpb1RPkRIo&callback=initMap"></script>
+
+</body>
+</html>
